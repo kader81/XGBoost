@@ -57,4 +57,4 @@ pred.result.mat = t(matrix(pred.result, nrow=38, ncol=length(pred.result)/38))
 # Take the maximum class as final result
 pred.result.mat = max.col(pred.result.mat,"last")
 # Create table or confusion matrix - check the accuracy
-confusionMatrix(y.check+1,probs)
+confusionMatrix(y.check+1,pred.result.mat)
